@@ -65,8 +65,9 @@ ul{
   background-color: #FFD700;
   color: black;
   border-radius: 50%;
-  padding: 5px 10px;
-  font-size: 13px;
+  border: 1px solid var(--light-gray);
+  padding: 5px 9px;
+  font-size: 10px;
 }
 .links li {
   position: relative;
@@ -104,7 +105,7 @@ main{
   color: black;
 }
 .about2{
-  font-size:20px ;
+  font-size: 19px;
   text-align: center;
 }
 .allcouch{
@@ -122,6 +123,12 @@ main{
   position: relative;
   width: 270px;
   height: 400px;
+}
+.main-couch .price{
+  color: #2f2f2f;
+}
+.main-couch .yazi{
+  font-style: italic;
 }
 .couch {
   background-color:#70817b22;
@@ -188,20 +195,6 @@ main{
 .couch:hover .plus {
   opacity: 1;
 }
-
-
-
-/* sayaç boyutunu küçültelim */
-/* font ekleyelim */
-/* our product kısmındaki yazıların boyutu ile oynayalım */
-/* home page shop now butonu ile oyna
-/* logoyu birazcık küçüktelim
-
-
-
-
-
-
 
 
 /*=================== RESPONSIVE DESIGN ===================*/

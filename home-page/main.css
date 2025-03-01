@@ -119,7 +119,7 @@ main {
 }
 .buttonici:hover{
   background-color: #FFD700;
-  color: black;    /*bi şeyler var*/
+  color: black !important;   /*bi şeyler var*/
 }
 
 /*=================== RESPONSIVE DESIGN ===================*/
