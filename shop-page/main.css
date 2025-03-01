@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/*=================== BASE ===================*/
+:root {
+  --dark-gray: #2f2f2f;
+  --light-gray: #6a6a6a;
+  --blue: #2f4d76;
+  --yellow: #FFD700;
+  --box-bgcolor: #70817b22;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", serif;
+  background-color: #EFF2F1;
+  color: var(--light-gray);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/*=================== NAV ===================*/
+nav {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 100px;
+  background-color: #2f4d76;
+  color:#ffffff ;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: box-shadow .4s;
+}
+ul{
+  display: flex;
+  column-gap: 100px;
+  font-size:20px ;
+  padding-left: 200px;
+}
+.logo img{
+  width: 130px;
+}
+.shopping{
+  font-size: 30px;
+}
+.sepet span {
+  position: absolute;
+  bottom: 20px;
+  right: 84px;
+  background-color: #FFD700;
+  color: black;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 13px;
+}
+.links li {
+  position: relative;
+  display: flex;
+  text-decoration: none;
+}
+.links li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #FFD700;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+.links li:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+  
+/*=================== MAIN ===================*/
+main{
+  margin: 70px 240px 0;
+  text-align: center;
+}
+.title{
+ text-align: center;
+  font-size: 45px;
+  margin-top: 150px;
+  margin-bottom: 40px;
+  color: black;
+}
+.about2{
+  font-size:20px ;
+  text-align: center;
+}
+.allcouch{
+  display: flex;
+  justify-content: center;
+  column-gap: 60px;
+}
+.allcouch img{
+  position: relative;
+  width: 270px;
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+.main-couch {
+  position: relative;
+  width: 270px;
+  height: 400px;
+}
+.couch {
+  background-color:#70817b22;
+  display: grid;
+  border-radius: 15px;
+  text-align: center;
+  width: 270px;
+  height: 300px;
+  box-shadow: #70817b22;
+  position: relative;
+  bottom: 240px;
+  transition: 0.3s ease;
+  opacity: 0;
+  z-index: 1;
+}
+.couch::after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.couch:hover {
+  box-shadow: 0 10px 10px;
+  transform: translateY(-10px);
+  opacity: 1;
+  z-index: 1;
+}
+.couch:hover::after {
+  opacity: 1;
+}
+.main-couch:hover img {
+  z-index: 2;
+  transform: scale(1.0) translateY(-10px);
+  transition: 0.3s ease;
+}
+.main-couch:hover .couch {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+.plus {
+  position: absolute;
+  bottom: -17px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5 ease;
+  box-shadow: 0 10px 10px var(--dark-gray);
+  opacity: 0;
+  z-index: 2;
+}
+.main-couch:hover .plus {
+  opacity: 1;
+}
+.couch:hover .plus {
+  opacity: 1;
+}
+
+
+
+/* sayaç boyutunu küçültelim */
+/* font ekleyelim */
+/* our product kısmındaki yazıların boyutu ile oynayalım */
+/* home page shop now butonu ile oyna
+/* logoyu birazcık küçüktelim
+
+
+
+
+
+
+
+
+/*=================== RESPONSIVE DESIGN ===================*/
+
+@media (max-width: 768px) {
+  nav{
+    justify-content: space-between;
+    position: relative;
+  }
+  ul{
+    display: none;
+  }
+  .allcouch{
+    display: block;
+  }
+  .main-couch{
+    pointer-events: none;
+  }
+  .couch{
+    opacity: 1;
+    pointer-events: none;
+  }
+  .plus{
+    opacity: 1;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  ul{
+    display: none;
+  }
+}
